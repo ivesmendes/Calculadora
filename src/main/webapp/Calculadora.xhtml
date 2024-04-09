@@ -8,21 +8,51 @@
 <h:body>
 	<h:form id="frm">
 		<h:messages />
-		<h:inputText size="12" value="#{calculadoraBean.valorA}">
-			<f:convertNumber minFractionDigits="2" maxFractionDigits="2"
-				locale="pt_BR" />
-		</h:inputText>
-+
-<h:inputText size="12" value="#{calculadoraBean.valorB}">
-			<f:convertNumber minFractionDigits="2" maxFractionDigits="2"
-				locale="pt_BR" />
-		</h:inputText>
-=
-<h:outputText value="#{calculadoraBean.resultado}">
-			<f:convertNumber type="currency" locale="pt_BR" />
-		</h:outputText>
+		<h:inputText size="12" value="#{calculadoraBean.valorSomaA}"/>
+		+
+		<h:inputText size="12" value="#{calculadoraBean.valorSomaB}"/>
+		=
+		<h:outputText value="#{calculadoraBean.resultadoSoma}"/>
 		<br />
+		
 		<h:commandButton value="Somar" action="#{calculadoraBean.somar}" />
+		
+		<br/>
+		<br/>
+		
+		<h:inputText size="12" value="#{calculadoraBean.valorSubA}"/>
+		-
+		<h:inputText size="12" value="#{calculadoraBean.valorSubB}"/>
+		=
+		<h:outputText value="#{calculadoraBean.resultadoSub}"/>
+		<br />
+		
+		<h:commandButton value="Subtrair" action="#{calculadoraBean.subtrair}" />
+		
+		<br/>
+		<br/>
+		
+		<h:inputText size="12" value="#{calculadoraBean.valorMultA}"/>
+		x
+		<h:inputText size="12" value="#{calculadoraBean.valorMultB}"/>
+		=
+		<h:outputText value="#{calculadoraBean.resultadoMult}"/>
+		<br />
+		
+		<h:commandButton value="Multiplicar" action="#{calculadoraBean.multiplicar}" />
+		
+		<br/>
+		<br/>
+		
+		<h:inputText size="12" value="#{calculadoraBean.valorDivA}"/>
+		%
+		<h:inputText size="12" value="#{calculadoraBean.valorDivB}"/>
+		=
+		<h:outputText value="#{calculadoraBean.resultadoDiv}"/>
+		<br />
+		
+		<h:commandButton value="Dividir" action="#{calculadoraBean.dividir}" />
+		
 	</h:form>
 </h:body>
 </html>
